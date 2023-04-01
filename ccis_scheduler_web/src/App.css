@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    padding: 10px;
+    max-width: 100%;
+    max-height: 100dvh;
+}
+
+.dashboard-container{
+    display: flex;
+}
+
+.sidebar-wrapper, .outlet-wrapper{
+    width: 50%;
+}
+
+.outlet-header{
+    display: flex;
+}
+/* LINK */
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.item{
+    display: flex;
+}
+.item div{
+    margin-right: 20px;
+}
+
+.selected{
+    color: blue;
+}
+
+.preview-profile{
+    display: flex;
+}
+img{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
