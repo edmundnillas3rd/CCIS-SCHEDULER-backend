@@ -1,0 +1,426 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "TEACHER",
+    "dateExported": "2023-04-01T15:02:53.851Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8f9024ad-8e9c-4255-ac38-e43215e92514",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "PROFILE",
+            "url": "localhost:5000/api/teacher/profile",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-03-29T10:24:10.032Z",
+            "modified": "2023-03-30T10:33:36.279Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDE3MjM4OH0.3JCfSxTchysrqBLS3SBqs9SIfmkNz5ag-4thqRNRq3o"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8aa8e412-9349-4efd-98be-5c1f00c1a423",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "ALL STUDENTS",
+            "url": "localhost:5000/api/teacher/all-students",
+            "method": "GET",
+            "sortNum": 5625,
+            "created": "2023-03-29T10:24:10.033Z",
+            "modified": "2023-03-29T10:59:44.613Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDA4NzU2Nn0.3qkm2GojAteg6YVh9cIMfi7s2UuS5tsDOLvvG07Lp48"
+            },
+            "tests": []
+        },
+        {
+            "_id": "abb272de-a944-4a26-ab0d-f62b4e5aba0c",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "ALL VENUES",
+            "url": "localhost:5000/api/teacher/all-venues",
+            "method": "GET",
+            "sortNum": 6250,
+            "created": "2023-03-29T10:24:10.034Z",
+            "modified": "2023-03-29T10:59:50.036Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDA4NzU2Nn0.3qkm2GojAteg6YVh9cIMfi7s2UuS5tsDOLvvG07Lp48"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8f5d4309-6b79-43f7-a1b2-3dcba24965da",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "SEARCH MEETING",
+            "url": "localhost:5000/api/teacher/search-meeting",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2023-03-29T10:24:10.035Z",
+            "modified": "2023-03-29T11:21:08.711Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"code\":\"BA7ECBFD\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU2NDk1NDJhLWJhZjgtNDA5My1iMTBiLWQ0YjMyODJiNzdiNiIsImlhdCI6MTY3OTk5OTY0NH0.N8CYZflDOHQjBYLe0D9BYHmwyZ1hqhMFFAZJ1NJ8Yek"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e01f0ff7-3652-41e4-879e-ee84462d781e",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "MY MEETINGS",
+            "url": "localhost:5000/api/teacher/my-meetings",
+            "method": "GET",
+            "sortNum": 7812.5,
+            "created": "2023-03-29T10:24:10.036Z",
+            "modified": "2023-03-29T11:01:25.720Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDA4NzU2Nn0.3qkm2GojAteg6YVh9cIMfi7s2UuS5tsDOLvvG07Lp48"
+            },
+            "tests": []
+        },
+        {
+            "_id": "913c0672-8c7d-49d2-ae7b-95670fff3434",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "ARCHIVE MEETINGS",
+            "url": "localhost:5000/api/teacher/archive-meetings",
+            "method": "GET",
+            "sortNum": 8125,
+            "created": "2023-03-29T10:24:10.037Z",
+            "modified": "2023-03-29T17:22:46.533Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDEwOTAyOX0.Lnsj-XHIS49qGnVGwyA4Pykrl_O-ZnuLrGOEJtsejCM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d5c4c6c8-3b30-45d0-91b2-d0514d554e05",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "VIEW MEETING",
+            "url": "localhost:5000/api/teacher/D38E638E/view-meeting",
+            "method": "GET",
+            "sortNum": 9375,
+            "created": "2023-03-29T10:24:10.038Z",
+            "modified": "2023-03-30T01:55:27.573Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDA4NzU2Nn0.3qkm2GojAteg6YVh9cIMfi7s2UuS5tsDOLvvG07Lp48"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ebd7b0cb-bc01-4b3e-9dbb-69eaebf439a7",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "VIEW ARCHIVE MEETING",
+            "url": "localhost:5000/api/teacher/D38E638E/view-archive-meeting",
+            "method": "GET",
+            "sortNum": 9687.5,
+            "created": "2023-03-29T10:24:10.039Z",
+            "modified": "2023-03-29T17:23:36.101Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDEwOTAyOX0.Lnsj-XHIS49qGnVGwyA4Pykrl_O-ZnuLrGOEJtsejCM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "5aa49968-1850-4130-95a7-54e42d385cb0",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "LOGIN",
+            "url": "localhost:5000/api/teacher/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-29T10:24:10.040Z",
+            "modified": "2023-03-30T10:33:08.069Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Bulad\",\n  \"password\": \"Bulad\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "65f02b50-edae-4416-ad6e-c109c7660b09",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "CONFIRM CREDENTIALS",
+            "url": "localhost:5000/api/teacher/confirm-credentials",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2023-03-30T10:30:47.535Z",
+            "modified": "2023-03-30T10:36:53.873Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"pecision.iking@gmail.com\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDE3MDc2M30.KJcPL7KuIE2aTXo9vRP44TYr3R9YOY_ZZP5KudhSHX4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d89dafe6-6feb-40f4-97d1-df58a79c6cad",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "SIGNOUT",
+            "url": "localhost:5000/api/teacher/signout",
+            "method": "PATCH",
+            "sortNum": 32500,
+            "created": "2023-03-29T10:24:10.042Z",
+            "modified": "2023-03-30T10:37:04.025Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU2NDk1NDJhLWJhZjgtNDA5My1iMTBiLWQ0YjMyODJiNzdiNiIsImlhdCI6MTY3OTk5OTY0NH0.N8CYZflDOHQjBYLe0D9BYHmwyZ1hqhMFFAZJ1NJ8Yek"
+            },
+            "tests": []
+        },
+        {
+            "_id": "905f233f-28f6-47da-b27c-396de891f8da",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "UPDATE PROFILE",
+            "url": "localhost:5000/api/teacher/update-profile",
+            "method": "PATCH",
+            "sortNum": 36250,
+            "created": "2023-03-30T10:08:59.619Z",
+            "modified": "2023-03-30T10:37:10.905Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": " {\n   \"fullname\": \"Profesor Kali Linux\", \n   \"email\": \"pecision.iking@gmail.com\"\n }",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDE3MDc2M30.KJcPL7KuIE2aTXo9vRP44TYr3R9YOY_ZZP5KudhSHX4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae5ddfba-3dc2-4768-888c-c9e43c49e20b",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "UPDATE PROFILE PIC",
+            "url": "localhost:5000/api/teacher/update-profile-pic",
+            "method": "PATCH",
+            "sortNum": 38125,
+            "created": "2023-03-30T10:13:36.543Z",
+            "modified": "2023-03-30T10:37:13.066Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "filename",
+                        "value": "lqwoblvv3hlghwimep2e"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "image",
+                        "value": "c:\\Users\\Hairyblue\\Pictures\\GimpTry.jpg"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDE3MDc2M30.KJcPL7KuIE2aTXo9vRP44TYr3R9YOY_ZZP5KudhSHX4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "bdfd9bae-5aa8-466d-8635-c766c5cd816a",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "UPDATE USERNAME",
+            "url": "localhost:5000/api/teacher/update-username",
+            "method": "PATCH",
+            "sortNum": 39062.5,
+            "created": "2023-03-30T10:30:21.726Z",
+            "modified": "2023-03-30T10:37:17.522Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Bulad\",\n  \"code\": \"119D3C04\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImNvZGUiOiIxMTlEM0MwNCIsImlhdCI6MTY4MDE3MTkzMiwiZXhwIjoxNjgwMTcyMjkyfQ.DYgrYa5kN7NVk-kN-6AFYfJyePJn83Ekss2GNK5l3sk"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8cf159b3-a115-47d6-a7d1-36db7c8e3ba4",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "UPDATE PASSWORD",
+            "url": "localhost:5000/api/teacher/update-password",
+            "method": "PATCH",
+            "sortNum": 39531.3,
+            "created": "2023-03-30T10:29:31.635Z",
+            "modified": "2023-03-30T10:37:19.490Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\": \"Bulad\",\n  \"code\": \"DDF9AF5D\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImNvZGUiOiJEREY5QUY1RCIsImlhdCI6MTY4MDE3MjAwOSwiZXhwIjoxNjgwMTcyMzY5fQ.1Pg39TTxdkcRVqlCc7_hIDnZfmyDZv0hw9ls1PHxOHE"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a4a2d043-cf40-4f73-ac51-6fae97b83f64",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "JOIN MEETING",
+            "url": "localhost:5000/api/teacher/D38E638E/join-meeting",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2023-03-29T10:24:10.041Z",
+            "modified": "2023-03-29T17:18:43.880Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDEwOTAyOX0.Lnsj-XHIS49qGnVGwyA4Pykrl_O-ZnuLrGOEJtsejCM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e3edbac3-0bd4-4a37-9e75-7cbdc835697b",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "UPDATE MEETING",
+            "url": "localhost:5000/api/teacher/D38E638E/update-meeting",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2023-03-30T14:42:01.449Z",
+            "modified": "2023-03-30T14:42:45.838Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"date\": \"2023-03-27\",\n  \"day\": \"THURSDAY\",\n  \"start\": \"9:00\",\n  \"end\": \"12:00\", \n  \"venue_id\": \"31885e0e-823c-44ec-b857-b6b0bc4ee506\",\n  \"postponed_reason\": \"NETC LANG DIAY VIP DALA EXTRA\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDE3MjM4OH0.3JCfSxTchysrqBLS3SBqs9SIfmkNz5ag-4thqRNRq3o"
+            },
+            "tests": []
+        },
+        {
+            "_id": "fef29258-7eeb-45ae-b8bd-1d8509f37410",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "POSTPONED MEETING",
+            "url": "localhost:5000/api/teacher/D38E638E/update-meeting",
+            "method": "PATCH",
+            "sortNum": 55000,
+            "created": "2023-03-30T10:51:28.616Z",
+            "modified": "2023-03-30T14:43:33.024Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"date\": \"2023-03-27\",\n  \"day\": \"THURSDAY\",\n  \"start\": \"9:00\",\n  \"end\": \"12:00\", \n  \"venue_id\": \"31885e0e-823c-44ec-b857-b6b0bc4ee506\",\n  \"postponed_reason\": \"NETC LANG DIAY VIP DALA EXTRA\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDE3MjM4OH0.3JCfSxTchysrqBLS3SBqs9SIfmkNz5ag-4thqRNRq3o"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d0a4fafc-8f79-4094-ac41-3e0839296579",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "LIMIT PATICIPANTS",
+            "url": "localhost:5000/api/teacher/D38E638E/limit-number-participants",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2023-03-29T12:20:39.864Z",
+            "modified": "2023-03-30T02:19:17.493Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"num_participants\": 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDA4NzU2Nn0.3qkm2GojAteg6YVh9cIMfi7s2UuS5tsDOLvvG07Lp48"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c13414b0-40ec-45f7-b9de-ce77fcfaac3c",
+            "colId": "de43d2fe-fafd-4600-a9b7-2303a8e91401",
+            "containerId": "",
+            "name": "REMOVE PROFILE PIC",
+            "url": "localhost:5000/api/teacher/dopp4hts94ijofqbbls3/remove-profile-pic",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2023-03-30T10:35:03.251Z",
+            "modified": "2023-03-30T10:35:03.251Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1MjIwNDAzLTcwNWYtNDMxMy1hMTJiLTNiOWRjMjM2ZTU1YyIsImlhdCI6MTY4MDE3MjM4OH0.3JCfSxTchysrqBLS3SBqs9SIfmkNz5ag-4thqRNRq3o"
+            },
+            "tests": []
+        }
+    ]
+}

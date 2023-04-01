@@ -1,0 +1,290 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "SUBADMIN",
+    "dateExported": "2023-04-01T15:02:43.891Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3a1f259a-355b-4e82-9107-049a72484c49",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "LOGIN",
+            "url": "localhost:5000/api/v1/sub-admin/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-29T12:31:45.221Z",
+            "modified": "2023-03-29T12:31:45.221Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"user2\",\n  \"password\": \"user2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "26abb506-0d20-4dfc-8291-ae33beaedf0f",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "PROFILE",
+            "url": "localhost:5000/api/v1/sub-admin/profile",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-03-29T12:32:56.589Z",
+            "modified": "2023-03-29T12:32:56.589Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "6cecf0db-7fd8-445a-bc47-226fdded2c50",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "ALL STUDENTS",
+            "url": "localhost:5000/api/v1/sub-admin/all-students",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-03-29T12:49:00.084Z",
+            "modified": "2023-03-29T12:49:00.084Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0286a5a5-d1ec-446e-ad73-e9630f337f87",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "ALL TEACHERS",
+            "url": "localhost:5000/api/v1/sub-admin/all-teachers",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-03-29T13:01:46.899Z",
+            "modified": "2023-03-29T13:01:46.899Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "2151e2c8-d92a-4bd3-bafa-29f5e789aebc",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "ALL VENUES",
+            "url": "localhost:5000/api/v1/sub-admin/all-venues",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-03-29T13:02:01.403Z",
+            "modified": "2023-03-29T13:02:01.403Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1754354f-c867-40bb-8bbe-f67f28b6d01d",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "TEAM MEMBERS",
+            "url": "localhost:5000/api/v1/sub-admin/team-members",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-03-29T13:02:19.508Z",
+            "modified": "2023-03-29T13:02:19.508Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a7e9f1d-0179-41b6-9a6b-ef082c3e81e5",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "LIST MEETING",
+            "url": "localhost:5000/api/v1/sub-admin/list-of-meetings",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-03-29T13:11:26.298Z",
+            "modified": "2023-03-29T13:11:26.298Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "eea1f359-961e-4b95-8c4f-c2d93fa2674c",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "LIST OF ARCHIVE MEETING",
+            "url": "localhost:5000/api/v1/sub-admin/list-of-archive-meetings",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-03-29T13:12:09.380Z",
+            "modified": "2023-03-29T13:12:09.380Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "f22a0edf-2955-412c-85de-8c055c08fc6b",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "VIEW MEETING",
+            "url": "localhost:5000/api/v1/sub-admin/:code/view-meeting",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-03-29T13:15:35.093Z",
+            "modified": "2023-03-29T13:15:35.093Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9388da4c-e12f-43ab-920d-8a5a11628416",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "VIEW ARCHIVE MEETING",
+            "url": "localhost:5000/api/v1/sub-admin/:code/view-archive-meeting",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-03-29T13:15:49.253Z",
+            "modified": "2023-03-29T13:15:49.253Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "7ce435dd-a8d8-4147-8b0f-764fede5fdf8",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "ADD TEACHER",
+            "url": "localhost:5000/api/v1/sub-admin/add-teacher",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-03-29T13:20:43.065Z",
+            "modified": "2023-03-29T13:20:43.065Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fullname\": \"Teacher 1\",\n  \"email\": \"pecision.iking@gmail.com\",\n  \"username\": \"user1\", \n  \"password\": \"user1\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ee7ef6a9-9487-4021-b746-47b112121638",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "ADD VENUE",
+            "url": "localhost:5000/api/v1/admin/add-venue",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-03-29T13:22:43.046Z",
+            "modified": "2023-03-29T13:22:43.046Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"area\": \"CCIS FACUTY\",\n  \"room\": \"M117\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "4fb93e59-2483-44f4-b318-7a75c230e90f",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "REMOVE STUDENTS",
+            "url": "localhost:5000/api/v1/sub-admin/students/4f6081a8-27f5-4a5c-8a2c-c5e24c452528",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2023-03-29T13:26:05.070Z",
+            "modified": "2023-03-29T13:26:05.070Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1a63c9cc-b43c-41b5-ba9c-c07365a93e19",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "Remove Teacher",
+            "url": "localhost:5000/api/v1/sub-admin/teachers/4831b918-1a13-4e7a-8db8-91e0cf486319",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2023-03-29T13:31:23.315Z",
+            "modified": "2023-03-29T13:31:23.315Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "25640760-89bc-410b-8f7d-3712f6fe5e50",
+            "colId": "d75d5afb-a928-42ea-89ef-b63ed2958011",
+            "containerId": "",
+            "name": "Remove Venue",
+            "url": "localhost:5000/api/v1/sub-admin/venues/b38f4850-7d13-440f-82f6-56e0829ce4aa",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2023-03-29T13:32:20.269Z",
+            "modified": "2023-03-29T13:32:20.269Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRlZTgyYzA2LTA4ZjItNDA5OS1iOTUwLTAxMTk1NGE1OGI4NSIsImlhdCI6MTY4MDA5MzA4Mn0.bzOgq_TTG7u6QN9d2nfq5Kxi_99gx-eyWibezaLHFJM"
+            },
+            "tests": []
+        }
+    ]
+}
