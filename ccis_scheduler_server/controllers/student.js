@@ -795,7 +795,7 @@ const signup = async (req, res, next) => {
       const verifyToken = jwt.sign({ id: id }, process.env.ACCESS_TOKEN);
       console.log(id);
       console.log(verifyToken);
-      const url = `https://render.com.ccis-scheduler/verify-account/:id/:verify_token`; //localhost:5000/api/student/verify-signup/${id}/${verify_token} react front end useparams then display useEffect
+      const url = `https://ccis-scheduler-backend.onrender.com/verify-account/${id}/${verifyToken}`; //localhost:5000/api/student/verify-signup/${id}/${verify_token} react front end useparams then display useEffect
 
       await transporter.sendMail({
         from: process.env.GMAIL_USER,
@@ -809,7 +809,7 @@ const signup = async (req, res, next) => {
                         <br>
                         Please click the verify account button.
                         <br>
-                        Click the <a href="https://www.youtube.com/" target="_blank">VERIFY ACCOUNT</a> to procceed`,
+                        Click the <a href=${url} target="_blank">VERIFY ACCOUNT</a> to procceed`,
       });
 
       res.status(200).json({
