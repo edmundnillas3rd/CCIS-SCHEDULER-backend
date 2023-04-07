@@ -795,7 +795,7 @@ const signup = async (req, res, next) => {
       const verifyToken = jwt.sign({ id: id }, process.env.ACCESS_TOKEN);
       console.log(id);
       console.log(verifyToken);
-      const url = `https://ccis-scheduler-backend.onrender.com/verify-account/${id}/${verifyToken}`; //localhost:5000/api/student/verify-signup/${id}/${verify_token} react front end useparams then display useEffect
+      const url = `https://ccis-scheduler.onrender.com/verify-account/${id}/${verifyToken}`; //localhost:5000/api/student/verify-signup/${id}/${verify_token} react front end useparams then display useEffect
 
       await transporter.sendMail({
         from: process.env.GMAIL_USER,
