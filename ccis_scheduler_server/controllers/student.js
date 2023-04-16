@@ -480,7 +480,7 @@ const creatorArchiveMeetings = async (req, res, next) => {
             end: result[i]?.time_end,
           },
           teacher: {
-            image: JSON.parse(result[i]?.teacher_image),
+            image: JSON.parse(result[i]?.teacher_image === undefined && null),
             fullname: result[i]?.teachers_fullname,
           },
           venue: {
@@ -818,7 +818,7 @@ const signup = async (req, res, next) => {
       });
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
     if (
       error.errno === 1062 &&
       error.sqlMessage ==
@@ -899,6 +899,7 @@ const createMeeting = async (req, res, next) => {
       .status(200)
       .json({ success_message: "You Succesfully Create A Meeting" });
   } catch (error) {
+    console.error(error);
     next(error);
   }
 };
@@ -959,6 +960,7 @@ const confirmCredentials = async (req, res, next) => {
 const updateStatusIfSignOut = async (req, res, next) => {
   try {
     const id = req.user;
+    console.log(`This is the user id : ${id}`);
     let sql = `update students set isActive = 0 where student_id = ?`;
     await db.query(`set sql_safe_updates = 0`);
     await db.query(sql, [id]);
