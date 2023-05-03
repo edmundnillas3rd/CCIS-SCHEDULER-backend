@@ -745,8 +745,8 @@ const login = async (req, res, next) => {
             student: {
               id: result[0]?.student_id,
               role: "student",
-              token: token,
-            },
+              token: token
+            }
           });
 
           let updateStatus = `update students set isActive = 1`;
