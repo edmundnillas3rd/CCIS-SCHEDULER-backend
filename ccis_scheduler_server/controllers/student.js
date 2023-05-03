@@ -960,7 +960,6 @@ const confirmCredentials = async (req, res, next) => {
 const updateStatusIfSignOut = async (req, res, next) => {
   try {
     const id = req.user;
-    console.log(`This is the user id : ${id}`);
     let sql = `update students set isActive = 0 where student_id = ?`;
     await db.query(`set sql_safe_updates = 0`);
     await db.query(sql, [id]);
