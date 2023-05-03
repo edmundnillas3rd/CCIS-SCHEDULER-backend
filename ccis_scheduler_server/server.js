@@ -6,6 +6,7 @@ const app = express();
 const PORT = 5000;
 const dotenv = require("dotenv");
 dotenv.config({ path: "config.env" });
+const session = require("express-session");
 
 const adminApi = require("./routes/adminApi");
 const studentApi = require("./routes/studentApi");
@@ -17,6 +18,18 @@ app.use(
   cors({
     origin: process.env.CLIENT_URL,
     credentials: true,
+  })
+);
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      secure: process.env.NODE_ENV === "production",
+    },
   })
 );
 
