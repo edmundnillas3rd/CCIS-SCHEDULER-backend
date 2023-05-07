@@ -12,6 +12,7 @@ router.get("/profile",jwtVerify, teacherController.teacherProfile)
 router.get("/all-students",jwtVerify, teacherController.allStudent)
 router.get("/all-venues", jwtVerify, teacherController.allVenues)
 router.get("/search-meeting", jwtVerify,teacherController.seachMeetingCode)
+router.get("/pending-meetings", jwtVerify, teacherController.pendingMeetings);
 router.get("/my-meetings", jwtVerify, teacherController.teacherMyMeetings)
 router.get("/archive-meetings", jwtVerify, teacherController.teacherArchiveMeetings)
 router.get("/:code/view-meeting", jwtVerify, teacherController.teacherViewMeeting)
