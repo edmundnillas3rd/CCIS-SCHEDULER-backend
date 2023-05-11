@@ -88,7 +88,7 @@ const allVenues = async (req, res, next) => {
 
 const seachMeetingCode = async (req, res, next) => {
   try {
-    const { code } = req.body;
+    const { code } = req.params;
     let sql = `select * from meetings
         inner join venues
         on venues_id = venue_id
