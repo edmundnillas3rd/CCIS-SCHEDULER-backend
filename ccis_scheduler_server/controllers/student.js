@@ -491,6 +491,7 @@ const creatorArchiveMeetings = async (req, res, next) => {
           views: result[i]?.views,
           postponed: result[i]?.postponed,
           reason: result[i]?.postponed_reason,
+          isArchived: result[i]?.isArchive
         };
         jsonObject[key].push(details);
       }

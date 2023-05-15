@@ -133,7 +133,7 @@ const pendingMeetings = async (req, res, next) => {
         where teachers_id is null and isArchive = 0`;
     const [result] = await db.query(sql, [id]);
     if (!result.length) {
-      next(new ExpressError(404, "No Pending Meetings That You Created"));
+      next(new ExpressError(404, "No Pending Meetings To be expected"));
     } else {
       let jsonObject = {};
       const key = "meetings";
@@ -323,6 +323,7 @@ const teacherArchiveMeetings = async (req, res, next) => {
           views: result[i]?.views,
           postponed: result[i]?.postponed,
           reason: result[i]?.postponed_reason,
+          isArchived: result[i]?.isArchive
         };
         jsonObject[key].push(details);
       }
@@ -643,6 +644,25 @@ const postponedMeeting = async (req, res, next) => {
   }
 };
 
+const archiveMeeting = async (req, res, next) => {
+  try {
+    const id = req.user;
+    const { code } = req.params;
+    let sql = `update meetings set isArchive = 1 where teachers_id = ? and meeting_code = ?`;
+
+    await db.query(`set sql_safe_updates = 0`);
+    const [result] = await db.query(sql, [id, code]);
+    await db.query(`set sql_safe_updates = 1`);
+    if (result.affectedRows === 0) {
+      next(new ExpressError(400, "Please Try Again"));
+    } else {
+      res.status(200).json({ success_message: "Archived Meeting Successfully" });
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
 const limitParticipants = async (req, res, next) => {
   const id = req.user;
   const { code } = req.params;
@@ -722,6 +742,7 @@ module.exports = {
   updateUsername,
   updatePassword,
   postponedMeeting,
+  archiveMeeting,
   limitParticipants,
   //DELETE
   removeProfilePic,

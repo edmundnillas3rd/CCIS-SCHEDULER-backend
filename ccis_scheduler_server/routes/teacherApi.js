@@ -11,7 +11,7 @@ const upload = multer({storage})
 router.get("/profile",jwtVerify, teacherController.teacherProfile)
 router.get("/all-students",jwtVerify, teacherController.allStudent)
 router.get("/all-venues", jwtVerify, teacherController.allVenues)
-router.get("/pending-meetings", jwtVerify, teacherController.pendingMeetings);
+router.get("/pending-meetings", jwtVerify, teacherController.pendingMeetings)
 router.get("/my-meetings", jwtVerify, teacherController.teacherMyMeetings)
 router.get("/archive-meetings", jwtVerify, teacherController.teacherArchiveMeetings)
 router.get("/:code/search-meeting", jwtVerify,teacherController.seachMeetingCode)
@@ -28,6 +28,7 @@ router.patch("/update-username", verifyCode, teacherController.updateUsername)
 router.patch("/update-password", verifyCode, teacherController.updatePassword)
 router.patch("/:code/join-meeting", jwtVerify,teacherController.joinMeeting)
 router.patch("/:code/postponed-meeting", jwtVerify, teacherController.postponedMeeting)
+router.patch("/:code/archived-meeting", jwtVerify, teacherController.archiveMeeting)
 router.patch("/:code/limit-number-participants", jwtVerify,teacherController.limitParticipants)
 
 //DELETE
