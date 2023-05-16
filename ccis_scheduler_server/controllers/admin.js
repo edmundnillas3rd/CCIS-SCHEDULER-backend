@@ -5,6 +5,8 @@ const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const ExpressError = require("../utils/ExpressError");
 const transporter = require("../services/transporter");
+const XLSX = require("xlsx");
+
 require("dotenv").config();
 
 //Get
@@ -120,7 +122,6 @@ const listOfMeeting = async (req, res, next) => {
                     where isArchive = 0`;
 
     const [result] = await db.query(sql);
-    console.log(result);
     if (!result.length) {
       next(new ExpressError(404, "No Available Meetings"));
     } else {
@@ -283,7 +284,192 @@ const adminViewMeeting = async (req, res, next) => {
     next(error);
   }
 };
-const adminViewArchiveMeeting = async (req, res, next) => {
+
+const downloadExcelSheet = async (req, res, next) => {
+  let meetingObject = {};
+  let archivedMeetingObject = {};
+  let studentObject = {};
+  let teacherObject = {};
+  let venueObject = {};
+
+  try {
+    let sql = `select * from meetings 
+                    inner join teachers
+                    on teachers_id = teacher_id
+                    inner join venues
+                    on venues_id = venue_id   
+                    where isArchive = 0`;
+
+    const [result] = await db.query(sql);
+    const key = "meetings";
+    meetingObject[key] = [];
+    for (let i = 0; i < result.length; i++) {
+      let details = {
+        id: result[i]?.meeting_id,
+        code: result[i]?.meeting_code,
+        title: result[i]?.meeting_title,
+        description: result[i]?.meeting_description,
+        date: result[i]?.meeting_date,
+        day: result[i]?.meeting_day,
+        time: `${result[i]?.time_start} - ${result[i]?.time_end}`,
+        teacher: result[i]?.teachers_fullname,
+        venue: `${result[i]?.area} / Room ${result[i]?.room}`,
+        views: result[i]?.views,
+        postponed: result[i]?.postponed,
+        reason: result[i]?.postponed_reason,
+      };
+      meetingObject[key].push(details);
+    }
+  } catch (error) {
+    next(error);
+  }
+
+  try {
+    let sql = `select * from meetings 
+                    inner join teachers
+                    on teachers_id = teacher_id
+                    inner join venues
+                    on venues_id = venue_id
+                    where isArchive = 1`;
+
+    const [result] = await db.query(sql);
+    const key = "meetings";
+    archivedMeetingObject[key] = [];
+    for (let i = 0; i < result.length; i++) {
+      let details = {
+        id: result[i]?.meeting_id,
+        code: result[i]?.meeting_code,
+        title: result[i]?.meeting_title,
+        description: result[i]?.meeting_description,
+        date: result[i]?.meeting_date,
+        day: result[i]?.meeting_day,
+        time: `${result[i]?.time_start} - ${result[i]?.time_end}`,
+        teacher: result[i]?.teachers_fullname,
+        venue: `${result[i]?.area} / Room ${result[i]?.room}`,
+        views: result[i]?.views,
+        postponed: result[i]?.postponed,
+        reason: result[i]?.postponed_reason,
+      };
+      archivedMeetingObject[key].push(details);
+    }
+  } catch (error) {
+    next(error);
+  }
+
+  try {
+    let sql = `select * from students order by _year desc`;
+    const [result] = await db.query(sql);
+
+    const key = "students";
+    studentObject[key] = [];
+
+    for (let i = 0; i < result.length; i++) {
+      let details = {
+        id: result[i]?.student_id,
+        image: JSON.parse(result[i]?.student_image),
+        fullname: result[i]?.students_fullname,
+        email: result[i]?.students_email,
+        course: result[i]?._course,
+        year: result[i]?._year,
+        sub_admin: result[i]?.subAdmin_Privilieges,
+      };
+      studentObject[key].push(details);
+    }
+  } catch (error) {
+    next(error);
+  }
+
+  try {
+    let sql = `select * from teachers`;
+    const [result] = await db.query(sql);
+    if (!result.length) {
+      next(new ExpressError(404, "No Teachers Available"));
+    } else {
+      const key = "teachers";
+      teacherObject[key] = [];
+
+      for (let i = 0; i < result.length; i++) {
+        let details = {
+          id: result[i]?.teacher_id,
+          image: JSON.parse(result[i]?.teacher_image),
+          fullname: result[i]?.teachers_fullname,
+          email: result[i]?.teachers_email,
+        };
+        teacherObject[key].push(details);
+      }
+    }
+  } catch (error) {
+    next(error);
+  }
+
+  try {
+    let sql = `select * from venues`;
+    const [result] = await db.query(sql);
+    const key = "venues";
+    venueObject[key] = [];
+
+    for (let i = 0; i < result.length; i++) {
+      let details = {
+        id: result[i]?.venue_id,
+        area: result[i]?.area,
+        room: result[i]?.room,
+      };
+      venueObject[key].push(details);
+    }
+  } catch (error) {
+    next(error);
+  }
+
+  const meetingsWorksheet = XLSX.utils.json_to_sheet(meetingObject.meetings);
+  const archivedMeetingsWorksheet = XLSX.utils.json_to_sheet(
+    archivedMeetingObject.meetings
+  );
+  const studentsWorksheet = XLSX.utils.json_to_sheet(studentObject.students);
+  const teachersWorksheet = XLSX.utils.json_to_sheet(teacherObject.teachers);
+  const venuesWorksheet = XLSX.utils.json_to_sheet(venueObject.venues);
+
+  const schedulerWorkbook = XLSX.utils.book_new();
+
+  XLSX.utils.book_append_sheet(
+    schedulerWorkbook,
+    meetingsWorksheet,
+    "Meetings"
+  );
+
+  XLSX.utils.book_append_sheet(
+    schedulerWorkbook,
+    archivedMeetingsWorksheet,
+    "Archived-Meetings"
+  );
+
+  XLSX.utils.book_append_sheet(
+    schedulerWorkbook,
+    studentsWorksheet,
+    "Students"
+  );
+
+  XLSX.utils.book_append_sheet(
+    schedulerWorkbook,
+    teachersWorksheet,
+    "Teachers"
+  );
+
+  XLSX.utils.book_append_sheet(
+    schedulerWorkbook,
+    venuesWorksheet,
+    "Venues"
+  );
+
+  const buf = XLSX.write(schedulerWorkbook, {
+    type: "buffer",
+    bookType: "xlsx",
+  });
+  res.attachment("ccis-scheduler-data.xlsx");
+
+  res.status(200).end(buf);
+};
+
+const adminViewArchivedMeeting = async (req, res, next) => {
   try {
     const { code } = req.params;
     let sql = `select meeting_id, meeting_code, meeting_date, meeting_day, time_start, time_end, area, room, views, postponed, postponed_reason, teacher_image,
@@ -722,8 +908,9 @@ module.exports = {
   listOfMeeting,
   listOfArchiveMeeting,
   adminViewMeeting,
-  adminViewArchiveMeeting,
+  adminViewArchivedMeeting,
   teamMembers,
+  downloadExcelSheet,
 
   login,
   signUpAdmin,
