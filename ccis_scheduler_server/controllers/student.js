@@ -732,7 +732,7 @@ const login = async (req, res, next) => {
           next(
             new ExpressError(
               400,
-              "This Account Has Not Yet Been Veried, Please Check Your Email To Verify Your Account"
+              "This Account Has Not Yet Been Verified, Please Check Your Email To Verify Your Account"
             )
           );
         } else {
